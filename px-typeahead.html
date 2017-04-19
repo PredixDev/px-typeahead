@@ -59,14 +59,21 @@ Custom property | Description | Default
       on-input="_onSearchInputChange"
       autocomplete="off">
     </input>
-    <template is="dom-if" if="{{_isSuggestionsEmtpy(_suggestions)}}">
+    <template is="dom-if" if="{{inputValue}}">
       <div class="dropdown__container" >
         <ul id="searchResults" class="list-bare">
-          <template is="dom-repeat" items="[[_boldResults(_suggestions.*, inputValue)]]">
-             <li on-tap="_select" on-mouseover="_onhover"
-             on-keyup="_keyup" class="result">
-             [[item.prefix]]<span class="bold">[[item.highlight]]</span>[[item.suffix]]
+          <template is="dom-if" if="{{!_isSuggestionsEmtpy(_suggestions)}}">
+            <li class="noResult">
+              <span class="italic">No Matches</span>
             </li>
+          </template>
+          <template is="dom-if" if="{{_isSuggestionsEmtpy(_suggestions)}}">
+            <template is="dom-repeat" items="[[_boldResults(_suggestions.*, inputValue)]]">
+               <li on-tap="_select" on-mouseover="_onhover"
+               on-keyup="_keyup" class="result">
+               [[item.prefix]]<span class="bold">[[item.highlight]]</span>[[item.suffix]]
+              </li>
+            </template>
           </template>
         </ul>
       </div>
@@ -388,6 +395,9 @@ Custom property | Description | Default
      * @param {e} event
      */
     _keyup: function(e) {
+      if (!this._isSuggestionsEmtpy(this._suggestions)) {
+        return;
+      }
 
       var alreadySelected,
           selectedItem,
