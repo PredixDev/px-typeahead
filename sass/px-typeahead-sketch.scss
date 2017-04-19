@@ -56,6 +56,9 @@ $inuit-enable-input--search     : true;
 			cursor: pointer;
       outline: none;
     }
+    li.noResult {
+      cursor: initial;
+    }
 	}
 }
 

@@ -41,6 +41,9 @@ common/abstract rules go in px-typeahead-sketch.scss, not in this file.
 			span.bold {
 			  font-weight: 600;
 			}
+      span.italic {
+        font-style: italic;
+      }
   	}
 	}
 }
