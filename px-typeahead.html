@@ -379,8 +379,8 @@ Custom property | Description
       }
 
       //if we've reached this point, selectedItem should be set.
-      this.set('value', selectedItem.textContent.trim());
       this.set('inputValue', selectedItem.textContent.trim());
+      this.set('value', selectedItem.textContent.trim());
       this.async(function () {
         this.set('_suggestions', []);
       }, 100);
