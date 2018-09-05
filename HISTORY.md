@@ -1,3 +1,8 @@
+v2.3.2
+==================
+* Removed id #search in px-typeahead and used the class variable .search__box.
+* This ensures no duplicate 'non-unique id' error that chrome console checks for.
+
 v2.3.1
 ==================
 * fire deselect event on clear

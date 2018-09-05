@@ -54,7 +54,7 @@ Custom property | Description
     </template>
 
     <div class="search__form">
-      <input id="search" class="text-input search__box" disabled$="[[disabled]]" placeholder="{{placeholder}}" value="{{inputValue::input}}"
+      <input class="text-input search__box" disabled$="[[disabled]]" placeholder="{{placeholder}}" value="{{inputValue::input}}"
          on-keydown="_keydown" on-focus="_onfocus" on-blur="_onblur" on-input="_onSearchInputChange" autocomplete="off" required="[[required]]">
       </input>
       <template is="dom-if" if="{{!inputValue}}">
@@ -214,7 +214,7 @@ Custom property | Description
 
     _setSearchResultSize: function () {
       if (this.$$('#searchResults')) {
-        var searchInputRect = this.$.search.getBoundingClientRect();
+        var searchInputRect = this.$$('.search__box').getBoundingClientRect();
         this.$$('#searchResults').style.width = searchInputRect.width + 'px';
       }
     },
@@ -265,7 +265,7 @@ Custom property | Description
      */
     _onblur: function (e) {
       this.set('_isFocused', false);
-      this.toggleClass('validation-error', this.required && !this.value, this.$.search);
+      this.toggleClass('validation-error', this.required && !this.value, this.$$('.search__box'));
     },
     /**
      * Fired when the search input field's content changes.
@@ -286,14 +286,14 @@ Custom property | Description
       var selectedItem = e.currentTarget,
         text = selectedItem.textContent.trim();
 
-      this.$.search.focus();
+      this.$$('.search__box').focus();
       this.set('inputValue', text);
       this.set('value', text);
       this.async(function () {
         this.set('_suggestions', []);
       }, 100);
 
-      this.toggleClass('validation-error', this.required && !this.value, this.$.search);
+      this.toggleClass('validation-error', this.required && !this.value, this.$$('.search__box'));
       this.fire('px-typeahead-item-selected', this.value);
       e.stopPropagation();
 
@@ -384,7 +384,7 @@ Custom property | Description
       this.async(function () {
         this.set('_suggestions', []);
       }, 100);
-      this.toggleClass('validation-error', false, this.$.search);
+      this.toggleClass('validation-error', false, this.$$('.search__box'));
       this.fire('px-typeahead-item-selected', this.value);
       Polymer.dom(this.root).querySelector('input').focus();
     },
@@ -531,7 +531,7 @@ Custom property | Description
     },
     _requiredChanged: function(newValue) {
       if(newValue === false) {
-        this.toggleClass('validation-error', false, this.$.search);
+        this.toggleClass('validation-error', false, this.$$('.search__box'));
       }
     }
   });
