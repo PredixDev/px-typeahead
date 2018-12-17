@@ -1,4 +1,4 @@
-# px-typeahead [![Build Status](https://travis-ci.org/PredixDev/px-typeahead.svg?branch=master)](https://travis-ci.org/PredixDev/px-typeahead)
+# px-typeahead [![Build Status](https://travis-ci.org/predixdesignsystem/px-typeahead.svg?branch=master)](https://travis-ci.org/predixdesignsystem/px-typeahead)
 
 
 ## Overview
@@ -41,7 +41,7 @@ Finally, use the component in your application:
 
 ## Documentation
 
-Read the full API and view the demo [here](https://predixdev.github.io/px-typeahead).
+Read the full API and view the demo [here](https://www.predix-ui.com/#/elements/px-typeahead).
 
 The documentation in this repository is supplemental to the official Predix documentation, which is continuously updated and maintained by the Predix documentation team. Go to [http://predix.io](http://predix.io)  to see the official Predix documentation.
 
@@ -73,4 +73,4 @@ Navigate to the root of that server (e.g. http://localhost:8080/) in a browser t
 
 ## Known Issues
 
-Please use [Github Issues]( https://github.com/predixdev/px-typeahead/issues) to submit any bugs you might find.
+Please use [Github Issues]( https://github.com/predixdesignsystem/px-typeahead/issues) to submit any bugs you might find.
