@@ -214,7 +214,7 @@ Custom property | Description
 
 
     _computeHasInputAndNotDisabled: function() {
-      return this.inputValue && !this.disabled;
+      return this.inputValue.length && this.disabled === false;
     },
 
     _setSearchResultSize: function () {
