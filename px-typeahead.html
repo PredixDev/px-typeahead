@@ -120,8 +120,10 @@ Custom property | Description
        */
       prefetchHeaders: {
         type: Object,
-        value: {
-          "X-Requested-With": "XMLHttpRequest"
+        value: function() {
+          return {
+            "X-Requested-With": "XMLHttpRequest"
+          }
         }
       },
       /**
@@ -163,8 +165,10 @@ Custom property | Description
        */
       remoteUrlSearchHeaders: {
         type: Object,
-        value: {
-          "X-Requested-With": "XMLHttpRequest"
+        value: function() {
+          return {
+            "X-Requested-With": "XMLHttpRequest"
+          }
         }
       },
       /**
