@@ -62,6 +62,21 @@ suite('<px-typeahead>', function (done) {
     });
   });
 
+  test('clear icon is not visible when input is disabled', (done)=> {
+    let disabledTypeaheadEl = fixture('typeaheadDisabled');
+
+    let isDisabled = disabledTypeaheadEl.disabled;
+    let inputValue = disabledTypeaheadEl.inputValue;
+
+    inputValue = 'abc';
+
+    flush(()=>{
+      let clear = Polymer.dom(disabledTypeaheadEl.root).querySelector('#clear__icon');
+      assert.equal(disabledTypeaheadEl._computeHasInputAndNotDisabled(inputValue, isDisabled), false)
+      done();
+    });
+  });
+
   test('is disabled', ()=> {
     let disabledTypeaheadEl = fixture('typeaheadDisabled');
     let input = Polymer.dom(disabledTypeaheadEl.root).querySelector('input');
