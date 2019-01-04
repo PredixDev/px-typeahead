@@ -121,7 +121,7 @@ Custom property | Description
       prefetchHeaders: {
         type: String,
         inputType: 'code:JSON',
-        value: '{"X-Requested-With": "XMLHttpRequest"}'t
+        value: '{"X-Requested-With": "XMLHttpRequest"}'
       },
       /**
       * The pre-fetched candidates retrieved by prefetchUrl
@@ -156,6 +156,14 @@ Custom property | Description
       remoteUrl: {
         type: String,
         value: ''
+      },
+      /**
+       * Headers for remote url searches
+       */
+      remoteUrlSearchHeaders: {
+        type: String,
+        inputType: 'code:JSON',
+        value: '{"X-Requested-With": "XMLHttpRequest"}'
       },
       /**
        * A boolean property to indicate if a search happens with a remote Url.
@@ -438,6 +446,7 @@ Custom property | Description
         url = pt_element.remoteUrl.replace("%QUERY", term);
 
       ironAjaxEl.handleAs = "json";
+      ironAjaxEl.headers = this.remoteUrlSearchHeaders;
       ironAjaxEl.url = url;
 
       ironAjaxEl.addEventListener('response', function (evt) {
