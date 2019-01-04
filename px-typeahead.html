@@ -49,7 +49,7 @@ Custom property | Description
   <template>
     <style include="px-typeahead-styles"></style>
     <template is="dom-if" if="{{prefetchUrl}}">
-      <iron-ajax auto url="{{prefetchUrl}}" handle-as="json" last-response="{{_prefetchedCandidates}}">
+      <iron-ajax auto url="{{prefetchUrl}}" headers="{{prefetchHeaders}}" handle-as="json" last-response="{{_prefetchedCandidates}}">
       </iron-ajax>
     </template>
 
@@ -114,6 +114,13 @@ Custom property | Description
       prefetchUrl: {
         type: String,
         value: ''
+      },
+      /**
+       * Headers for pretech reques
+       */
+      prefetchHeaders: {
+        type: String,
+        value: '{"X-Requested-With": "XMLHttpRequest"}'
       },
       /**
       * The pre-fetched candidates retrieved by prefetchUrl

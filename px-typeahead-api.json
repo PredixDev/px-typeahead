@@ -8,52 +8,55 @@
       "properties": [
         {
           "name": "_parentResizable",
-          "type": "Object",
+          "type": "Object | null | undefined",
           "description": "The closest ancestor element that implements `IronResizableBehavior`.",
           "privacy": "protected",
           "sourceRange": {
-            "file": "bower_components/iron-resizable-behavior/iron-resizable-behavior.html",
+            "file": "../iron-resizable-behavior/iron-resizable-behavior.html",
             "start": {
-              "line": 36,
+              "line": 41,
               "column": 6
             },
             "end": {
-              "line": 39,
-              "column": 7
+              "line": 41,
+              "column": 75
             }
           },
           "metadata": {
             "polymer": {
-              "observer": "\"_parentResizableChanged\""
+              "observer": "\"_parentResizableChanged\"",
+              "attributeType": "Object"
             }
           },
           "inheritedFrom": "Polymer.IronResizableBehavior"
         },
         {
           "name": "_notifyingDescendant",
-          "type": "boolean",
+          "type": "boolean | null | undefined",
           "description": "True if this element is currently notifying its descendant elements of\nresize.",
           "privacy": "protected",
           "sourceRange": {
-            "file": "bower_components/iron-resizable-behavior/iron-resizable-behavior.html",
+            "file": "../iron-resizable-behavior/iron-resizable-behavior.html",
             "start": {
-              "line": 45,
+              "line": 47,
               "column": 6
             },
             "end": {
-              "line": 48,
-              "column": 7
+              "line": 47,
+              "column": 57
             }
           },
           "metadata": {
-            "polymer": {}
+            "polymer": {
+              "attributeType": "Boolean"
+            }
           },
           "defaultValue": "false",
           "inheritedFrom": "Polymer.IronResizableBehavior"
         },
         {
           "name": "disabled",
-          "type": "boolean",
+          "type": "boolean | null | undefined",
           "description": "Sets disabled on the input element.",
           "privacy": "public",
           "sourceRange": {
@@ -67,13 +70,15 @@
             }
           },
           "metadata": {
-            "polymer": {}
+            "polymer": {
+              "attributeType": "Boolean"
+            }
           },
           "defaultValue": "false"
         },
         {
           "name": "placeholder",
-          "type": "string",
+          "type": "string | null | undefined",
           "description": "The placeholder for the input element.",
           "privacy": "public",
           "sourceRange": {
@@ -87,13 +92,15 @@
             }
           },
           "metadata": {
-            "polymer": {}
+            "polymer": {
+              "attributeType": "String"
+            }
           },
           "defaultValue": "\"Enter Your Search Query\""
         },
         {
           "name": "localCandidates",
-          "type": "Array",
+          "type": "Array | null | undefined",
           "description": "The search candidates from local data model.",
           "privacy": "public",
           "sourceRange": {
@@ -107,13 +114,15 @@
             }
           },
           "metadata": {
-            "polymer": {}
+            "polymer": {
+              "attributeType": "Array"
+            }
           },
           "defaultValue": "[]"
         },
         {
           "name": "prefetchUrl",
-          "type": "string",
+          "type": "string | null | undefined",
           "description": "Url for a pre-fetched list in json format for the list of suggestion candidates.\nThe response should be an array - for example: [\"a\",\"b\"]",
           "privacy": "public",
           "sourceRange": {
@@ -127,82 +136,87 @@
             }
           },
           "metadata": {
-            "polymer": {}
+            "polymer": {
+              "attributeType": "String"
+            }
           },
           "defaultValue": "\"\""
         },
         {
-          "name": "_prefetchedCandidates",
-          "type": "Array",
-          "description": "The pre-fetched candidates retrieved by prefetchUrl",
-          "privacy": "protected",
+          "name": "prefetchHeaders",
+          "type": "string | null | undefined",
+          "description": "Headers for pretech reques",
+          "privacy": "public",
           "sourceRange": {
             "start": {
               "line": 120,
               "column": 6
             },
             "end": {
-              "line": 125,
-              "column": 7
-            }
-          },
-          "metadata": {
-            "polymer": {}
-          },
-          "defaultValue": "[]"
-        },
-        {
-          "name": "_suggestions",
-          "type": "Array",
-          "description": "Internal variable holding all matched suggestions.",
-          "privacy": "protected",
-          "sourceRange": {
-            "start": {
-              "line": 129,
-              "column": 6
-            },
-            "end": {
-              "line": 135,
+              "line": 123,
               "column": 7
             }
           },
           "metadata": {
             "polymer": {
-              "notify": true
+              "attributeType": "String"
+            }
+          },
+          "defaultValue": "\"{\\\"X-Requested-With\\\": \\\"XMLHttpRequest\\\"}\""
+        },
+        {
+          "name": "_prefetchedCandidates",
+          "type": "Array | null | undefined",
+          "description": "The pre-fetched candidates retrieved by prefetchUrl",
+          "privacy": "protected",
+          "sourceRange": {
+            "start": {
+              "line": 127,
+              "column": 6
+            },
+            "end": {
+              "line": 132,
+              "column": 7
+            }
+          },
+          "metadata": {
+            "polymer": {
+              "attributeType": "Array"
+            }
+          },
+          "defaultValue": "[]"
+        },
+        {
+          "name": "_suggestions",
+          "type": "Array | null | undefined",
+          "description": "Internal variable holding all matched suggestions.",
+          "privacy": "protected",
+          "sourceRange": {
+            "start": {
+              "line": 136,
+              "column": 6
+            },
+            "end": {
+              "line": 142,
+              "column": 7
+            }
+          },
+          "metadata": {
+            "polymer": {
+              "notify": true,
+              "attributeType": "Array"
             }
           },
           "defaultValue": "[]"
         },
         {
           "name": "maxSuggestions",
-          "type": "number",
+          "type": "number | null | undefined",
           "description": "Maximum number of suggestions for remote urls",
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 139,
-              "column": 6
-            },
-            "end": {
-              "line": 143,
-              "column": 7
-            }
-          },
-          "metadata": {
-            "polymer": {
-              "notify": true
-            }
-          },
-          "defaultValue": "5"
-        },
-        {
-          "name": "remoteUrl",
-          "type": "string",
-          "description": "Remote url to perform a search using the value in the input. The input value will be passed in as url parameter. The placeholder should be %QUERY.",
-          "privacy": "public",
-          "sourceRange": {
-            "start": {
-              "line": 147,
+              "line": 146,
               "column": 6
             },
             "end": {
@@ -211,85 +225,89 @@
             }
           },
           "metadata": {
-            "polymer": {}
+            "polymer": {
+              "notify": true,
+              "attributeType": "Number"
+            }
+          },
+          "defaultValue": "5"
+        },
+        {
+          "name": "remoteUrl",
+          "type": "string | null | undefined",
+          "description": "Remote url to perform a search using the value in the input. The input value will be passed in as url parameter. The placeholder should be %QUERY.",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 154,
+              "column": 6
+            },
+            "end": {
+              "line": 157,
+              "column": 7
+            }
+          },
+          "metadata": {
+            "polymer": {
+              "attributeType": "String"
+            }
           },
           "defaultValue": "\"\""
         },
         {
           "name": "remoteUrlSearching",
-          "type": "boolean",
+          "type": "boolean | null | undefined",
           "description": "A boolean property to indicate if a search happens with a remote Url.\nMust be used together with remoteUrl.",
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 155,
+              "line": 162,
               "column": 6
             },
             "end": {
-              "line": 159,
-              "column": 7
-            }
-          },
-          "metadata": {
-            "polymer": {
-              "notify": true
-            }
-          },
-          "defaultValue": "false"
-        },
-        {
-          "name": "value",
-          "type": "string",
-          "description": "The currently selected value of the input.",
-          "privacy": "public",
-          "sourceRange": {
-            "start": {
-              "line": 163,
-              "column": 6
-            },
-            "end": {
-              "line": 167,
-              "column": 7
-            }
-          },
-          "metadata": {
-            "polymer": {
-              "notify": true
-            }
-          },
-          "defaultValue": "\"\""
-        },
-        {
-          "name": "inputValue",
-          "type": "string",
-          "description": "The current value of the input while the user is searching.",
-          "privacy": "public",
-          "sourceRange": {
-            "start": {
-              "line": 171,
-              "column": 6
-            },
-            "end": {
-              "line": 176,
+              "line": 166,
               "column": 7
             }
           },
           "metadata": {
             "polymer": {
               "notify": true,
-              "observer": "\"_search\""
+              "attributeType": "Boolean"
+            }
+          },
+          "defaultValue": "false"
+        },
+        {
+          "name": "value",
+          "type": "string | null | undefined",
+          "description": "The currently selected value of the input.",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 170,
+              "column": 6
+            },
+            "end": {
+              "line": 174,
+              "column": 7
+            }
+          },
+          "metadata": {
+            "polymer": {
+              "notify": true,
+              "attributeType": "String"
             }
           },
           "defaultValue": "\"\""
         },
         {
-          "name": "_isFocused",
-          "type": "boolean",
-          "description": "Helper function to determine if typeahead is attached yet.",
-          "privacy": "protected",
+          "name": "inputValue",
+          "type": "string | null | undefined",
+          "description": "The current value of the input while the user is searching.",
+          "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 180,
+              "line": 178,
               "column": 6
             },
             "end": {
@@ -298,28 +316,55 @@
             }
           },
           "metadata": {
-            "polymer": {}
+            "polymer": {
+              "notify": true,
+              "observer": "\"_search\"",
+              "attributeType": "String"
+            }
           },
-          "defaultValue": "false"
+          "defaultValue": "\"\""
         },
         {
-          "name": "required",
-          "type": "boolean",
-          "description": "Whether the typeahead is required to be filled in before proceeding.",
-          "privacy": "public",
+          "name": "_isFocused",
+          "type": "boolean | null | undefined",
+          "description": "Helper function to determine if typeahead is attached yet.",
+          "privacy": "protected",
           "sourceRange": {
             "start": {
               "line": 187,
               "column": 6
             },
             "end": {
-              "line": 191,
+              "line": 190,
               "column": 7
             }
           },
           "metadata": {
             "polymer": {
-              "observer": "\"_requiredChanged\""
+              "attributeType": "Boolean"
+            }
+          },
+          "defaultValue": "false"
+        },
+        {
+          "name": "required",
+          "type": "boolean | null | undefined",
+          "description": "Whether the typeahead is required to be filled in before proceeding.",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 194,
+              "column": 6
+            },
+            "end": {
+              "line": 198,
+              "column": 7
+            }
+          },
+          "metadata": {
+            "polymer": {
+              "observer": "\"_requiredChanged\"",
+              "attributeType": "Boolean"
             }
           },
           "defaultValue": "false"
@@ -331,18 +376,21 @@
           "description": "",
           "privacy": "protected",
           "sourceRange": {
-            "file": "bower_components/iron-resizable-behavior/iron-resizable-behavior.html",
+            "file": "../iron-resizable-behavior/iron-resizable-behavior.html",
             "start": {
-              "line": 55,
+              "line": 54,
               "column": 4
             },
             "end": {
-              "line": 60,
+              "line": 59,
               "column": 5
             }
           },
           "metadata": {},
           "params": [],
+          "return": {
+            "type": "void"
+          },
           "inheritedFrom": "Polymer.IronResizableBehavior"
         },
         {
@@ -350,18 +398,21 @@
           "description": "",
           "privacy": "protected",
           "sourceRange": {
-            "file": "bower_components/iron-resizable-behavior/iron-resizable-behavior.html",
+            "file": "../iron-resizable-behavior/iron-resizable-behavior.html",
             "start": {
-              "line": 62,
+              "line": 61,
               "column": 4
             },
             "end": {
-              "line": 64,
+              "line": 63,
               "column": 5
             }
           },
           "metadata": {},
           "params": [],
+          "return": {
+            "type": "void"
+          },
           "inheritedFrom": "Polymer.IronResizableBehavior"
         },
         {
@@ -369,9 +420,9 @@
           "description": "",
           "privacy": "protected",
           "sourceRange": {
-            "file": "bower_components/iron-resizable-behavior/iron-resizable-behavior.html",
+            "file": "../iron-resizable-behavior/iron-resizable-behavior.html",
             "start": {
-              "line": 66,
+              "line": 65,
               "column": 4
             },
             "end": {
@@ -381,6 +432,9 @@
           },
           "metadata": {},
           "params": [],
+          "return": {
+            "type": "void"
+          },
           "inheritedFrom": "Polymer.IronResizableBehavior"
         },
         {
@@ -388,7 +442,7 @@
           "description": "Can be called to manually notify a resizable and its descendant\nresizables of a resize change.",
           "privacy": "public",
           "sourceRange": {
-            "file": "bower_components/iron-resizable-behavior/iron-resizable-behavior.html",
+            "file": "../iron-resizable-behavior/iron-resizable-behavior.html",
             "start": {
               "line": 80,
               "column": 4
@@ -400,6 +454,9 @@
           },
           "metadata": {},
           "params": [],
+          "return": {
+            "type": "void"
+          },
           "inheritedFrom": "Polymer.IronResizableBehavior"
         },
         {
@@ -407,13 +464,13 @@
           "description": "Used to assign the closest resizable ancestor to this resizable\nif the ancestor detects a request for notifications.",
           "privacy": "public",
           "sourceRange": {
-            "file": "bower_components/iron-resizable-behavior/iron-resizable-behavior.html",
+            "file": "../iron-resizable-behavior/iron-resizable-behavior.html",
             "start": {
               "line": 98,
               "column": 4
             },
             "end": {
-              "line": 100,
+              "line": 110,
               "column": 5
             }
           },
@@ -423,6 +480,9 @@
               "name": "parentResizable"
             }
           ],
+          "return": {
+            "type": "void"
+          },
           "inheritedFrom": "Polymer.IronResizableBehavior"
         },
         {
@@ -430,13 +490,13 @@
           "description": "Used to remove a resizable descendant from the list of descendants\nthat should be notified of a resize change.",
           "privacy": "public",
           "sourceRange": {
-            "file": "bower_components/iron-resizable-behavior/iron-resizable-behavior.html",
+            "file": "../iron-resizable-behavior/iron-resizable-behavior.html",
             "start": {
-              "line": 106,
+              "line": 116,
               "column": 4
             },
             "end": {
-              "line": 113,
+              "line": 123,
               "column": 5
             }
           },
@@ -446,6 +506,9 @@
               "name": "target"
             }
           ],
+          "return": {
+            "type": "void"
+          },
           "inheritedFrom": "Polymer.IronResizableBehavior"
         },
         {
@@ -453,14 +516,14 @@
           "description": "This method can be overridden to filter nested elements that should or\nshould not be notified by the current element. Return true if an element\nshould be notified, or false if it should not be notified.",
           "privacy": "public",
           "sourceRange": {
-            "file": "bower_components/iron-resizable-behavior/iron-resizable-behavior.html",
+            "file": "../iron-resizable-behavior/iron-resizable-behavior.html",
             "start": {
-              "line": 124,
+              "line": 134,
               "column": 4
             },
             "end": {
-              "line": 124,
-              "column": 59
+              "line": 136,
+              "column": 5
             }
           },
           "metadata": {},
@@ -482,13 +545,13 @@
           "description": "",
           "privacy": "protected",
           "sourceRange": {
-            "file": "bower_components/iron-resizable-behavior/iron-resizable-behavior.html",
+            "file": "../iron-resizable-behavior/iron-resizable-behavior.html",
             "start": {
-              "line": 126,
+              "line": 138,
               "column": 4
             },
             "end": {
-              "line": 138,
+              "line": 150,
               "column": 5
             }
           },
@@ -498,6 +561,9 @@
               "name": "event"
             }
           ],
+          "return": {
+            "type": "void"
+          },
           "inheritedFrom": "Polymer.IronResizableBehavior"
         },
         {
@@ -505,18 +571,21 @@
           "description": "",
           "privacy": "protected",
           "sourceRange": {
-            "file": "bower_components/iron-resizable-behavior/iron-resizable-behavior.html",
+            "file": "../iron-resizable-behavior/iron-resizable-behavior.html",
             "start": {
-              "line": 140,
+              "line": 152,
               "column": 4
             },
             "end": {
-              "line": 145,
+              "line": 154,
               "column": 5
             }
           },
           "metadata": {},
           "params": [],
+          "return": {
+            "type": "void"
+          },
           "inheritedFrom": "Polymer.IronResizableBehavior"
         },
         {
@@ -524,13 +593,13 @@
           "description": "",
           "privacy": "protected",
           "sourceRange": {
-            "file": "bower_components/iron-resizable-behavior/iron-resizable-behavior.html",
+            "file": "../iron-resizable-behavior/iron-resizable-behavior.html",
             "start": {
-              "line": 147,
+              "line": 156,
               "column": 4
             },
             "end": {
-              "line": 162,
+              "line": 166,
               "column": 5
             }
           },
@@ -540,6 +609,9 @@
               "name": "event"
             }
           ],
+          "return": {
+            "type": "void"
+          },
           "inheritedFrom": "Polymer.IronResizableBehavior"
         },
         {
@@ -547,13 +619,13 @@
           "description": "",
           "privacy": "protected",
           "sourceRange": {
-            "file": "bower_components/iron-resizable-behavior/iron-resizable-behavior.html",
+            "file": "../iron-resizable-behavior/iron-resizable-behavior.html",
             "start": {
-              "line": 164,
+              "line": 168,
               "column": 4
             },
             "end": {
-              "line": 168,
+              "line": 172,
               "column": 5
             }
           },
@@ -563,6 +635,9 @@
               "name": "parentResizable"
             }
           ],
+          "return": {
+            "type": "void"
+          },
           "inheritedFrom": "Polymer.IronResizableBehavior"
         },
         {
@@ -570,13 +645,13 @@
           "description": "",
           "privacy": "protected",
           "sourceRange": {
-            "file": "bower_components/iron-resizable-behavior/iron-resizable-behavior.html",
+            "file": "../iron-resizable-behavior/iron-resizable-behavior.html",
             "start": {
-              "line": 170,
+              "line": 174,
               "column": 4
             },
             "end": {
-              "line": 181,
+              "line": 185,
               "column": 5
             }
           },
@@ -586,6 +661,9 @@
               "name": "descendant"
             }
           ],
+          "return": {
+            "type": "void"
+          },
           "inheritedFrom": "Polymer.IronResizableBehavior"
         },
         {
@@ -593,18 +671,43 @@
           "description": "",
           "privacy": "protected",
           "sourceRange": {
-            "file": "bower_components/iron-resizable-behavior/iron-resizable-behavior.html",
+            "file": "../iron-resizable-behavior/iron-resizable-behavior.html",
             "start": {
-              "line": 183,
+              "line": 187,
               "column": 4
             },
             "end": {
-              "line": 211,
+              "line": 232,
               "column": 5
             }
           },
           "metadata": {},
           "params": [],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "Polymer.IronResizableBehavior"
+        },
+        {
+          "name": "_findParent",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../iron-resizable-behavior/iron-resizable-behavior.html",
+            "start": {
+              "line": 234,
+              "column": 4
+            },
+            "end": {
+              "line": 246,
+              "column": 5
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "return": {
+            "type": "void"
+          },
           "inheritedFrom": "Polymer.IronResizableBehavior"
         },
         {
@@ -613,24 +716,7 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 198,
-              "column": 4
-            },
-            "end": {
-              "line": 212,
-              "column": 5
-            }
-          },
-          "metadata": {},
-          "params": []
-        },
-        {
-          "name": "_setSearchResultSize",
-          "description": "",
-          "privacy": "protected",
-          "sourceRange": {
-            "start": {
-              "line": 214,
+              "line": 205,
               "column": 4
             },
             "end": {
@@ -639,7 +725,30 @@
             }
           },
           "metadata": {},
-          "params": []
+          "params": [],
+          "return": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "_setSearchResultSize",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "start": {
+              "line": 221,
+              "column": 4
+            },
+            "end": {
+              "line": 226,
+              "column": 5
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "return": {
+            "type": "void"
+          }
         },
         {
           "name": "_isSuggestionsEmpty",
@@ -647,11 +756,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 220,
+              "line": 227,
               "column": 4
             },
             "end": {
-              "line": 222,
+              "line": 229,
               "column": 5
             }
           },
@@ -664,11 +773,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 228,
+              "line": 235,
               "column": 4
             },
             "end": {
-              "line": 244,
+              "line": 251,
               "column": 5
             }
           },
@@ -677,7 +786,10 @@
             {
               "name": "e"
             }
-          ]
+          ],
+          "return": {
+            "type": "void"
+          }
         },
         {
           "name": "_onhover",
@@ -685,11 +797,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 249,
+              "line": 256,
               "column": 4
             },
             "end": {
-              "line": 255,
+              "line": 262,
               "column": 5
             }
           },
@@ -698,7 +810,10 @@
             {
               "name": "e"
             }
-          ]
+          ],
+          "return": {
+            "type": "void"
+          }
         },
         {
           "name": "_onfocus",
@@ -706,28 +821,7 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 259,
-              "column": 4
-            },
-            "end": {
-              "line": 261,
-              "column": 5
-            }
-          },
-          "metadata": {},
-          "params": [
-            {
-              "name": "e"
-            }
-          ]
-        },
-        {
-          "name": "_onblur",
-          "description": "Sets _isFocused to false",
-          "privacy": "protected",
-          "sourceRange": {
-            "start": {
-              "line": 265,
+              "line": 266,
               "column": 4
             },
             "end": {
@@ -740,15 +834,18 @@
             {
               "name": "e"
             }
-          ]
+          ],
+          "return": {
+            "type": "void"
+          }
         },
         {
-          "name": "_onSearchInputChange",
-          "description": "Fired when the search input field's content changes.",
+          "name": "_onblur",
+          "description": "Sets _isFocused to false",
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 273,
+              "line": 272,
               "column": 4
             },
             "end": {
@@ -761,7 +858,34 @@
             {
               "name": "e"
             }
-          ]
+          ],
+          "return": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "_onSearchInputChange",
+          "description": "Fired when the search input field's content changes.",
+          "privacy": "protected",
+          "sourceRange": {
+            "start": {
+              "line": 280,
+              "column": 4
+            },
+            "end": {
+              "line": 282,
+              "column": 5
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "e"
+            }
+          ],
+          "return": {
+            "type": "void"
+          }
         },
         {
           "name": "_select",
@@ -769,11 +893,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 284,
+              "line": 291,
               "column": 4
             },
             "end": {
-              "line": 299,
+              "line": 306,
               "column": 5
             }
           },
@@ -782,7 +906,10 @@
             {
               "name": "e"
             }
-          ]
+          ],
+          "return": {
+            "type": "void"
+          }
         },
         {
           "name": "_downArrowPress",
@@ -790,11 +917,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 300,
+              "line": 307,
               "column": 4
             },
             "end": {
-              "line": 326,
+              "line": 333,
               "column": 5
             }
           },
@@ -803,7 +930,10 @@
             {
               "name": "e"
             }
-          ]
+          ],
+          "return": {
+            "type": "void"
+          }
         },
         {
           "name": "_upArrowPress",
@@ -811,11 +941,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 327,
+              "line": 334,
               "column": 4
             },
             "end": {
-              "line": 350,
+              "line": 357,
               "column": 5
             }
           },
@@ -824,7 +954,10 @@
             {
               "name": "e"
             }
-          ]
+          ],
+          "return": {
+            "type": "void"
+          }
         },
         {
           "name": "_enterPress",
@@ -832,11 +965,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 351,
+              "line": 358,
               "column": 4
             },
             "end": {
-              "line": 389,
+              "line": 396,
               "column": 5
             }
           },
@@ -853,11 +986,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 390,
+              "line": 397,
               "column": 4
             },
             "end": {
-              "line": 400,
+              "line": 407,
               "column": 5
             }
           },
@@ -866,7 +999,10 @@
             {
               "name": "e"
             }
-          ]
+          ],
+          "return": {
+            "type": "void"
+          }
         },
         {
           "name": "_checkIfSingleResult",
@@ -874,11 +1010,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 401,
+              "line": 408,
               "column": 4
             },
             "end": {
-              "line": 406,
+              "line": 413,
               "column": 5
             }
           },
@@ -887,7 +1023,10 @@
             {
               "name": "e"
             }
-          ]
+          ],
+          "return": {
+            "type": "void"
+          }
         },
         {
           "name": "_localCandidatesSearch",
@@ -895,11 +1034,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 407,
+              "line": 414,
               "column": 4
             },
             "end": {
-              "line": 414,
+              "line": 421,
               "column": 5
             }
           },
@@ -916,11 +1055,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 415,
+              "line": 422,
               "column": 4
             },
             "end": {
-              "line": 421,
+              "line": 428,
               "column": 5
             }
           },
@@ -937,11 +1076,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 422,
+              "line": 429,
               "column": 4
             },
             "end": {
-              "line": 464,
+              "line": 471,
               "column": 5
             }
           },
@@ -958,11 +1097,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 468,
+              "line": 475,
               "column": 4
             },
             "end": {
-              "line": 483,
+              "line": 490,
               "column": 5
             }
           },
@@ -982,28 +1121,7 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 484,
-              "column": 4
-            },
-            "end": {
-              "line": 520,
-              "column": 5
-            }
-          },
-          "metadata": {},
-          "params": [
-            {
-              "name": "term"
-            }
-          ]
-        },
-        {
-          "name": "_clear",
-          "description": "",
-          "privacy": "protected",
-          "sourceRange": {
-            "start": {
-              "line": 521,
+              "line": 491,
               "column": 4
             },
             "end": {
@@ -1012,10 +1130,17 @@
             }
           },
           "metadata": {},
-          "params": []
+          "params": [
+            {
+              "name": "term"
+            }
+          ],
+          "return": {
+            "type": "void"
+          }
         },
         {
-          "name": "_disabledClass",
+          "name": "_clear",
           "description": "",
           "privacy": "protected",
           "sourceRange": {
@@ -1024,7 +1149,27 @@
               "column": 4
             },
             "end": {
-              "line": 530,
+              "line": 534,
+              "column": 5
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "return": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "_disabledClass",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "start": {
+              "line": 535,
+              "column": 4
+            },
+            "end": {
+              "line": 537,
               "column": 5
             }
           },
@@ -1041,11 +1186,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 531,
+              "line": 538,
               "column": 4
             },
             "end": {
-              "line": 535,
+              "line": 542,
               "column": 5
             }
           },
@@ -1054,7 +1199,10 @@
             {
               "name": "newValue"
             }
-          ]
+          ],
+          "return": {
+            "type": "void"
+          }
         }
       ],
       "staticMethods": [],
@@ -1071,7 +1219,7 @@
           "column": 10
         },
         "end": {
-          "line": 536,
+          "line": 543,
           "column": 3
         }
       },
@@ -1092,7 +1240,7 @@
             }
           },
           "metadata": {},
-          "type": "boolean"
+          "type": "boolean | null | undefined"
         },
         {
           "name": "placeholder",
@@ -1108,7 +1256,7 @@
             }
           },
           "metadata": {},
-          "type": "string"
+          "type": "string | null | undefined"
         },
         {
           "name": "local-candidates",
@@ -1124,7 +1272,7 @@
             }
           },
           "metadata": {},
-          "type": "Array"
+          "type": "Array | null | undefined"
         },
         {
           "name": "prefetch-url",
@@ -1140,30 +1288,30 @@
             }
           },
           "metadata": {},
-          "type": "string"
+          "type": "string | null | undefined"
+        },
+        {
+          "name": "prefetch-headers",
+          "description": "Headers for pretech reques",
+          "sourceRange": {
+            "start": {
+              "line": 120,
+              "column": 6
+            },
+            "end": {
+              "line": 123,
+              "column": 7
+            }
+          },
+          "metadata": {},
+          "type": "string | null | undefined"
         },
         {
           "name": "max-suggestions",
           "description": "Maximum number of suggestions for remote urls",
           "sourceRange": {
             "start": {
-              "line": 139,
-              "column": 6
-            },
-            "end": {
-              "line": 143,
-              "column": 7
-            }
-          },
-          "metadata": {},
-          "type": "number"
-        },
-        {
-          "name": "remote-url",
-          "description": "Remote url to perform a search using the value in the input. The input value will be passed in as url parameter. The placeholder should be %QUERY.",
-          "sourceRange": {
-            "start": {
-              "line": 147,
+              "line": 146,
               "column": 6
             },
             "end": {
@@ -1172,102 +1320,118 @@
             }
           },
           "metadata": {},
-          "type": "string"
+          "type": "number | null | undefined"
+        },
+        {
+          "name": "remote-url",
+          "description": "Remote url to perform a search using the value in the input. The input value will be passed in as url parameter. The placeholder should be %QUERY.",
+          "sourceRange": {
+            "start": {
+              "line": 154,
+              "column": 6
+            },
+            "end": {
+              "line": 157,
+              "column": 7
+            }
+          },
+          "metadata": {},
+          "type": "string | null | undefined"
         },
         {
           "name": "remote-url-searching",
           "description": "A boolean property to indicate if a search happens with a remote Url.\nMust be used together with remoteUrl.",
           "sourceRange": {
             "start": {
-              "line": 155,
+              "line": 162,
               "column": 6
             },
             "end": {
-              "line": 159,
+              "line": 166,
               "column": 7
             }
           },
           "metadata": {},
-          "type": "boolean"
+          "type": "boolean | null | undefined"
         },
         {
           "name": "value",
           "description": "The currently selected value of the input.",
           "sourceRange": {
             "start": {
-              "line": 163,
+              "line": 170,
               "column": 6
             },
             "end": {
-              "line": 167,
+              "line": 174,
               "column": 7
             }
           },
           "metadata": {},
-          "type": "string"
+          "type": "string | null | undefined"
         },
         {
           "name": "input-value",
           "description": "The current value of the input while the user is searching.",
           "sourceRange": {
             "start": {
-              "line": 171,
+              "line": 178,
               "column": 6
             },
             "end": {
-              "line": 176,
+              "line": 183,
               "column": 7
             }
           },
           "metadata": {},
-          "type": "string"
+          "type": "string | null | undefined"
         },
         {
           "name": "required",
           "description": "Whether the typeahead is required to be filled in before proceeding.",
           "sourceRange": {
             "start": {
-              "line": 187,
+              "line": 194,
               "column": 6
             },
             "end": {
-              "line": 191,
+              "line": 198,
               "column": 7
             }
           },
           "metadata": {},
-          "type": "boolean"
+          "type": "boolean | null | undefined"
         }
       ],
       "events": [
         {
           "type": "CustomEvent",
           "name": "px-typeahead-item-deselected",
-          "description": "px-typeahead-item-deselected",
+          "description": "Fired when an item is deselected because the user has\npressed the backspace key to change or clear the search field.",
           "metadata": {}
         },
         {
           "type": "CustomEvent",
           "name": "px-typeahead-item-selected",
-          "description": "px-typeahead-item-selected",
+          "description": "Fired when an item is selected.",
           "metadata": {}
         },
         {
           "type": "CustomEvent",
           "name": "px-typeahead-remote-searching-end",
-          "description": "px-typeahead-remote-searching-end",
+          "description": "Fired when the searching has ended on a remote data source",
           "metadata": {}
         },
         {
           "type": "CustomEvent",
           "name": "px-typeahead-remote-searching-start",
-          "description": "px-typeahead-remote-searching-start",
+          "description": "Fired when the searching has begun on a remote data source",
           "metadata": {}
         },
         {
           "type": "CustomEvent",
           "name": "px-typeahead-search-input-change",
-          "description": "px-typeahead-search-input-change",
+          "description": "Fired when the search input field's content changes.",
           "metadata": {}
         },
         {
