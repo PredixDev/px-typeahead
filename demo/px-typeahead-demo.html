@@ -207,8 +207,11 @@ limitations under the License.
         defaultValue: "https://www.predix-ui.com/px-typeahead/px-typeahead/countries.json"
       },
       prefetchHeaders: {
-        type: String,
-        defaultValue: '{"X-Requested-With": "XMLHttpRequest"}'
+        type: Object,
+        inputType: 'code:JSON',
+        defaultValue: {
+          "X-Requested-With": "XMLHttpRequest"
+        }
       }
     }
   });

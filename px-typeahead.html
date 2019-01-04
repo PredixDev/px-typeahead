@@ -119,9 +119,10 @@ Custom property | Description
        * Headers for pretech request
        */
       prefetchHeaders: {
-        type: String,
-        inputType: 'code:JSON',
-        value: '{"X-Requested-With": "XMLHttpRequest"}'
+        type: Object,
+        defaultValue: {
+          "X-Requested-With": "XMLHttpRequest"
+        }
       },
       /**
       * The pre-fetched candidates retrieved by prefetchUrl
@@ -161,9 +162,10 @@ Custom property | Description
        * Headers for remote url searches
        */
       remoteUrlSearchHeaders: {
-        type: String,
-        inputType: 'code:JSON',
-        value: '{"X-Requested-With": "XMLHttpRequest"}'
+        type: Object,
+        defaultValue: {
+          "X-Requested-With": "XMLHttpRequest"
+        }
       },
       /**
        * A boolean property to indicate if a search happens with a remote Url.
