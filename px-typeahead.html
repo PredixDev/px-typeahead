@@ -60,7 +60,7 @@ Custom property | Description
       <template is="dom-if" if="{{!inputValue}}">
         <px-icon id="search__icon" class$="typeahead__icon [[_disabledClass(disabled)]]" icon="px-utl:search"></px-icon>
       </template>
-      <template is="dom-if" if="{{inputValue}}">
+      <template is="dom-if" if="[[_computeHasInputAndNotDisabled(inputValue, disabled)]]">
         <px-icon id="clear__icon" class="typeahead__icon" icon="px-nav:close" on-tap="_clear"></px-icon>
       </template>
     </div>
@@ -232,6 +232,11 @@ Custom property | Description
           ptinputs[i]._suggestions = [];
         }
       });
+    },
+
+
+    _computeHasInputAndNotDisabled: function() {
+      return this.inputValue.length && this.disabled === false;
     },
 
     _setSearchResultSize: function () {
