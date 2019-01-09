@@ -26,6 +26,7 @@ limitations under the License.
 <link rel="import" href="../../px-demo/px-demo-props.html" />
 <link rel="import" href="../../px-demo/px-demo-interactive.html" />
 <link rel="import" href="../../px-demo/px-demo-component-snippet.html" />
+<link rel="import" href="../../px-demo/px-demo-code-editor.html" />
 
 <!-- Imports for this component -->
 
@@ -48,6 +49,9 @@ limitations under the License.
       <!-- Props -->
       <px-demo-props slot="px-demo-props" props="{{props}}" config="[[chosenConfig]]"></px-demo-props>
 
+      <!-- Code Editor -->
+      <px-demo-code-editor slot="px-demo-code-editor" props="{{props}}" config="[[chosenConfig]]"></px-demo-code-editor>
+
       <!-- Component ---------------------------------------------------------->
       <px-demo-component slot="px-demo-component">
         <div style="width:250px;">
@@ -56,6 +60,7 @@ limitations under the License.
             disabled="{{props.disabled.value}}"
             required="{{props.required.value}}"
             prefetch-url="{{props.prefetchUrl.value}}"
+            prefetch-headers="{{props.prefetchHeaders.value}}"
             placeholder="[[props.placeholder.value]]">
           </px-typeahead>
         </div>
@@ -105,14 +110,18 @@ limitations under the License.
             {
               configName: "Default",
               configReset: true,
-              prefetchUrl: ''
+              prefetchUrl: '',
+              prefetchHeaders: ''
             },
             {
               configName: "Prefetch URL",
               disabled: false,
               localCandidates: '',
               placeholder: "Options from a JSON file",
-              prefetchUrl: "https://www.predix-ui.com/px-typeahead/px-typeahead/countries.json"
+              prefetchUrl: "https://cors-anywhere.herokuapp.com/https://predix-ui.github.io/px-typeahead/px-typeahead/countries.json",
+              prefetchHeaders: {
+                "From": "predixdesignsystem@ge.com"
+              }
             }
           ];
         }
@@ -204,7 +213,14 @@ limitations under the License.
       },
       prefetchUrl: {
         type: String,
-        defaultValue: "https://www.predix-ui.com/px-typeahead/px-typeahead/countries.json"
+        defaultValue: "https://cors-anywhere.herokuapp.com/https://predix-ui.github.io/px-typeahead/px-typeahead/countries.json"
+      },
+      prefetchHeaders: {
+        type: Object,
+        inputType: 'code:JSON',
+        defaultValue: {
+          'From': 'predixdesignsystem@ge.com'
+        }
       }
     }
   });

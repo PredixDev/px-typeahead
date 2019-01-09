@@ -49,7 +49,7 @@ Custom property | Description
   <template>
     <style include="px-typeahead-styles"></style>
     <template is="dom-if" if="{{prefetchUrl}}">
-      <iron-ajax auto url="{{prefetchUrl}}" handle-as="json" last-response="{{_prefetchedCandidates}}">
+      <iron-ajax auto url="{{prefetchUrl}}" headers="{{prefetchHeaders}}" handle-as="json" last-response="{{_prefetchedCandidates}}">
       </iron-ajax>
     </template>
 
@@ -116,6 +116,15 @@ Custom property | Description
         value: ''
       },
       /**
+       * Headers for prefetch request
+       */
+      prefetchHeaders: {
+        type: Object,
+        value: function() {
+          return {}
+        }
+      },
+      /**
       * The pre-fetched candidates retrieved by prefetchUrl
       */
       _prefetchedCandidates: {
@@ -148,6 +157,15 @@ Custom property | Description
       remoteUrl: {
         type: String,
         value: ''
+      },
+      /**
+       * Headers for remote url searches
+       */
+      remoteUrlSearchHeaders: {
+        type: Object,
+        value: function() {
+          return {}
+        }
       },
       /**
        * A boolean property to indicate if a search happens with a remote Url.
@@ -435,6 +453,7 @@ Custom property | Description
         url = pt_element.remoteUrl.replace("%QUERY", term);
 
       ironAjaxEl.handleAs = "json";
+      ironAjaxEl.headers = this.remoteUrlSearchHeaders;
       ironAjaxEl.url = url;
 
       ironAjaxEl.addEventListener('response', function (evt) {
