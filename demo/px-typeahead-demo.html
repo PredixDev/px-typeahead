@@ -118,9 +118,9 @@ limitations under the License.
               disabled: false,
               localCandidates: '',
               placeholder: "Options from a JSON file",
-              prefetchUrl: "https://cdn.jsdelivr.net/gh/predixdesignsystem/px-typeahead/countries.json",
+              prefetchUrl: "https://cors-anywhere.herokuapp.com/https://predix-ui.github.io/px-typeahead/px-typeahead/countries.json",
               prefetchHeaders: {
-                "Access-Control-Request-Method": "GET"
+                "From": "predixdesignsystem@ge.com"
               }
             }
           ];
@@ -213,7 +213,7 @@ limitations under the License.
       },
       prefetchUrl: {
         type: String,
-        defaultValue: "https://cdn.jsdelivr.net/gh/predixdesignsystem/px-typeahead/countries.json"
+        defaultValue: "https://cors-anywhere.herokuapp.com/https://predix-ui.github.io/px-typeahead/px-typeahead/countries.json"
       },
       prefetchHeaders: {
         type: Object,
