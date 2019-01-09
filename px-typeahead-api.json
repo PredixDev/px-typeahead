@@ -145,7 +145,7 @@
         {
           "name": "prefetchHeaders",
           "type": "Object | null | undefined",
-          "description": "Headers for pretech request",
+          "description": "Headers for prefetch request",
           "privacy": "public",
           "sourceRange": {
             "start": {
@@ -162,7 +162,7 @@
               "attributeType": "Object"
             }
           },
-          "defaultValue": "{\"X-Requested-With\":\"XMLHttpRequest\"}"
+          "defaultValue": "{}"
         },
         {
           "name": "_prefetchedCandidates",
@@ -274,7 +274,7 @@
               "attributeType": "Object"
             }
           },
-          "defaultValue": "{\"X-Requested-With\":\"XMLHttpRequest\"}"
+          "defaultValue": "{}"
         },
         {
           "name": "remoteUrlSearching",
@@ -1331,7 +1331,7 @@
         },
         {
           "name": "prefetch-headers",
-          "description": "Headers for pretech request",
+          "description": "Headers for prefetch request",
           "sourceRange": {
             "start": {
               "line": 120,

@@ -23,13 +23,9 @@ limitations under the License.
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>px-typeahead Demo</title>
   <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-  <link rel="import" href="../../polymer/polymer.html" />
-  <link rel="import" href="../../px-icon-set/px-icon-set.html" />
-
-  <!-- Common demo imports -->
-  <link rel="import" href="../../px-demo/px-demo-header.html" />
-  <link rel="import" href="../../px-demo/px-demo-props.html" />
-  <link rel="import" href="../../px-theme/px-theme-styles.html">
+<link rel="import" href="../../polymer/polymer.html" />
+<link rel="import" href="../px-typeahead.html" />
+<link rel="import" href="../../px-theme/px-theme-styles.html" />
 
 </head>
 
@@ -63,7 +59,7 @@ limitations under the License.
 
         <div style="margin:30px 0">
           <h4>Test custom headers on prefetch</h4>
-          <px-typeahead max-suggestions="4" prefetch-url="https://cdn.jsdelivr.net/gh/predixdesignsystem/px-typeahead/countries.json"  placeholder="Ajax call getting countries.json"></px-typeahead>
+          <px-typeahead max-suggestions="4" prefetch-url="https://cdn.jsdelivr.net/gh/predixdesignsystem/px-typeahead/countries.json" prefetch-headers="{{prefetchHeaders}}" placeholder="Ajax call getting countries.json"></px-typeahead>
         </div>
       </div>
     </template>
@@ -135,7 +131,7 @@ limitations under the License.
     });
 
     app.prefetchHeaders = {
-      'accept': 'application/ge'
+      'From': 'predixdesignsystem@ge.com'
     }
   </script>
 </body>
