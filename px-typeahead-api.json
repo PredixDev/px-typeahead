@@ -153,7 +153,7 @@
               "column": 6
             },
             "end": {
-              "line": 127,
+              "line": 125,
               "column": 7
             }
           },
@@ -171,11 +171,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 131,
+              "line": 129,
               "column": 6
             },
             "end": {
-              "line": 136,
+              "line": 134,
               "column": 7
             }
           },
@@ -193,11 +193,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 140,
+              "line": 138,
               "column": 6
             },
             "end": {
-              "line": 146,
+              "line": 144,
               "column": 7
             }
           },
@@ -216,11 +216,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 150,
+              "line": 148,
               "column": 6
             },
             "end": {
-              "line": 154,
+              "line": 152,
               "column": 7
             }
           },
@@ -239,11 +239,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 158,
+              "line": 156,
               "column": 6
             },
             "end": {
-              "line": 161,
+              "line": 159,
               "column": 7
             }
           },
@@ -261,11 +261,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 165,
+              "line": 163,
               "column": 6
             },
             "end": {
-              "line": 172,
+              "line": 168,
               "column": 7
             }
           },
@@ -283,11 +283,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 177,
+              "line": 173,
               "column": 6
             },
             "end": {
-              "line": 181,
+              "line": 177,
               "column": 7
             }
           },
@@ -306,11 +306,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 185,
+              "line": 181,
               "column": 6
             },
             "end": {
-              "line": 189,
+              "line": 185,
               "column": 7
             }
           },
@@ -329,11 +329,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 193,
+              "line": 189,
               "column": 6
             },
             "end": {
-              "line": 198,
+              "line": 194,
               "column": 7
             }
           },
@@ -353,11 +353,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 202,
+              "line": 198,
               "column": 6
             },
             "end": {
-              "line": 205,
+              "line": 201,
               "column": 7
             }
           },
@@ -375,11 +375,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 209,
+              "line": 205,
               "column": 6
             },
             "end": {
-              "line": 213,
+              "line": 209,
               "column": 7
             }
           },
@@ -738,11 +738,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 220,
+              "line": 216,
               "column": 4
             },
             "end": {
-              "line": 234,
+              "line": 230,
               "column": 5
             }
           },
@@ -758,11 +758,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 237,
+              "line": 233,
               "column": 4
             },
             "end": {
-              "line": 239,
+              "line": 235,
               "column": 5
             }
           },
@@ -775,11 +775,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 241,
+              "line": 237,
               "column": 4
             },
             "end": {
-              "line": 246,
+              "line": 242,
               "column": 5
             }
           },
@@ -795,11 +795,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 247,
+              "line": 243,
               "column": 4
             },
             "end": {
-              "line": 249,
+              "line": 245,
               "column": 5
             }
           },
@@ -812,11 +812,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 255,
+              "line": 251,
               "column": 4
             },
             "end": {
-              "line": 271,
+              "line": 267,
               "column": 5
             }
           },
@@ -836,11 +836,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 276,
+              "line": 272,
               "column": 4
             },
             "end": {
-              "line": 282,
+              "line": 278,
               "column": 5
             }
           },
@@ -860,11 +860,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 286,
+              "line": 282,
               "column": 4
             },
             "end": {
-              "line": 288,
+              "line": 284,
               "column": 5
             }
           },
@@ -884,11 +884,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 292,
+              "line": 288,
               "column": 4
             },
             "end": {
-              "line": 295,
+              "line": 291,
               "column": 5
             }
           },
@@ -908,11 +908,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 300,
+              "line": 296,
               "column": 4
             },
             "end": {
-              "line": 302,
+              "line": 298,
               "column": 5
             }
           },
@@ -932,11 +932,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 311,
+              "line": 307,
               "column": 4
             },
             "end": {
-              "line": 326,
+              "line": 322,
               "column": 5
             }
           },
@@ -956,11 +956,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 327,
+              "line": 323,
               "column": 4
             },
             "end": {
-              "line": 353,
+              "line": 349,
               "column": 5
             }
           },
@@ -980,11 +980,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 354,
+              "line": 350,
               "column": 4
             },
             "end": {
-              "line": 377,
+              "line": 373,
               "column": 5
             }
           },
@@ -1004,11 +1004,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 378,
+              "line": 374,
               "column": 4
             },
             "end": {
-              "line": 416,
+              "line": 412,
               "column": 5
             }
           },
@@ -1025,11 +1025,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 417,
+              "line": 413,
               "column": 4
             },
             "end": {
-              "line": 427,
+              "line": 423,
               "column": 5
             }
           },
@@ -1049,11 +1049,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 428,
+              "line": 424,
               "column": 4
             },
             "end": {
-              "line": 433,
+              "line": 429,
               "column": 5
             }
           },
@@ -1073,11 +1073,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 434,
+              "line": 430,
               "column": 4
             },
             "end": {
-              "line": 441,
+              "line": 437,
               "column": 5
             }
           },
@@ -1094,11 +1094,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 442,
+              "line": 438,
               "column": 4
             },
             "end": {
-              "line": 448,
+              "line": 444,
               "column": 5
             }
           },
@@ -1115,11 +1115,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 449,
+              "line": 445,
               "column": 4
             },
             "end": {
-              "line": 492,
+              "line": 488,
               "column": 5
             }
           },
@@ -1136,11 +1136,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 496,
+              "line": 492,
               "column": 4
             },
             "end": {
-              "line": 511,
+              "line": 507,
               "column": 5
             }
           },
@@ -1160,11 +1160,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 512,
+              "line": 508,
               "column": 4
             },
             "end": {
-              "line": 548,
+              "line": 544,
               "column": 5
             }
           },
@@ -1184,11 +1184,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 549,
+              "line": 545,
               "column": 4
             },
             "end": {
-              "line": 555,
+              "line": 551,
               "column": 5
             }
           },
@@ -1204,11 +1204,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 556,
+              "line": 552,
               "column": 4
             },
             "end": {
-              "line": 558,
+              "line": 554,
               "column": 5
             }
           },
@@ -1225,11 +1225,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 559,
+              "line": 555,
               "column": 4
             },
             "end": {
-              "line": 563,
+              "line": 559,
               "column": 5
             }
           },
@@ -1258,7 +1258,7 @@
           "column": 10
         },
         "end": {
-          "line": 564,
+          "line": 560,
           "column": 3
         }
       },
@@ -1338,7 +1338,7 @@
               "column": 6
             },
             "end": {
-              "line": 127,
+              "line": 125,
               "column": 7
             }
           },
@@ -1350,11 +1350,11 @@
           "description": "Maximum number of suggestions for remote urls",
           "sourceRange": {
             "start": {
-              "line": 150,
+              "line": 148,
               "column": 6
             },
             "end": {
-              "line": 154,
+              "line": 152,
               "column": 7
             }
           },
@@ -1366,11 +1366,11 @@
           "description": "Remote url to perform a search using the value in the input. The input value will be passed in as url parameter. The placeholder should be %QUERY.",
           "sourceRange": {
             "start": {
-              "line": 158,
+              "line": 156,
               "column": 6
             },
             "end": {
-              "line": 161,
+              "line": 159,
               "column": 7
             }
           },
@@ -1382,11 +1382,11 @@
           "description": "Headers for remote url searches",
           "sourceRange": {
             "start": {
-              "line": 165,
+              "line": 163,
               "column": 6
             },
             "end": {
-              "line": 172,
+              "line": 168,
               "column": 7
             }
           },
@@ -1398,11 +1398,11 @@
           "description": "A boolean property to indicate if a search happens with a remote Url.\nMust be used together with remoteUrl.",
           "sourceRange": {
             "start": {
-              "line": 177,
+              "line": 173,
               "column": 6
             },
             "end": {
-              "line": 181,
+              "line": 177,
               "column": 7
             }
           },
@@ -1414,11 +1414,11 @@
           "description": "The currently selected value of the input.",
           "sourceRange": {
             "start": {
-              "line": 185,
+              "line": 181,
               "column": 6
             },
             "end": {
-              "line": 189,
+              "line": 185,
               "column": 7
             }
           },
@@ -1430,11 +1430,11 @@
           "description": "The current value of the input while the user is searching.",
           "sourceRange": {
             "start": {
-              "line": 193,
+              "line": 189,
               "column": 6
             },
             "end": {
-              "line": 198,
+              "line": 194,
               "column": 7
             }
           },
@@ -1446,11 +1446,11 @@
           "description": "Whether the typeahead is required to be filled in before proceeding.",
           "sourceRange": {
             "start": {
-              "line": 209,
+              "line": 205,
               "column": 6
             },
             "end": {
-              "line": 213,
+              "line": 209,
               "column": 7
             }
           },
